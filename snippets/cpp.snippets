@@ -1,0 +1,34 @@
+snippet cpbeg
+#include <bits/stdc++.h>
+#define TESTCASE ${1}
+typedef long long ll;
+
+using namespace std;
+
+void solve(){
+	${2}
+}
+
+int main(){
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+#if TESTCASE == 0
+	solve();
+#elif TESTCASE == 1
+	ll testcases;
+	cin >> testcases;
+	while(testcases--){
+		solve();
+	}
+#elif TESTCASE == 2
+	ll testcases, sr = 1;
+	cin >> testcases;
+	while(testcases--){
+		cout << "Case #" << sr << ": ";
+		solve();
+		sr++;
+	}
+#endif
+	return 0;
+}
+endsnippet
